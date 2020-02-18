@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/estados?useTimezone=true&serverTimezone=UTC
+    username: root
+    password:
+server:
+  port: 8082
+
+  
