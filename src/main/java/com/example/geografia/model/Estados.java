@@ -21,7 +21,7 @@ public class Estados {
 		super();
 	}
 	
-	public Integer getCodigo() {
+	public Integer getCodigo() { 
 		return codigo;
 	}
 	public void setCodigo(Integer codigo) {
