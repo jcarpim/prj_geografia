@@ -12,8 +12,8 @@ import com.example.geografia.model.Estados;
 @Repository
 public interface EstadosRepository extends JpaRepository<Estados, Integer>{
 
-	@Query( value="SELECT a.sigla,a.descricao FROM estados a where a.sigla=:sigla ",nativeQuery = true)
+	@Query(value = "SELECT a FROM estados a where a.uf=:sigla ", nativeQuery = true)
 	
-	List<Estados>findAllBySigla(@Param("sigla")String sigla);
+	List<Estados> findAllBySigla(@Param("sigla") String sigla);
 	
 }
