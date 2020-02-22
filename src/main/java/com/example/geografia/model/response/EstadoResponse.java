@@ -8,32 +8,30 @@ public class EstadoResponse implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer codigo;
-	private String sigla;
-	
-	public EstadoResponse(Integer codigo, String sigla) {
-		super();
-		this.codigo = codigo;
-		this.sigla = sigla;
-	}
-	
-	public EstadoResponse() {
-		super();
-	}
-	
+	@JsonProperty(value = "SIGLA_COM")
+	private String uf;
 	public Integer getCodigo() {
 		return codigo;
 	}
-	
 	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
-	
-	public String getSigla() {
-		return sigla;
+  
+	public EstadoResponse() {
+		super();
 	}
-	
-	public void setSigla(String sigla) {
-		this.sigla = sigla;
+	public String getUf() {
+		return uf;
 	}
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+	public EstadoResponse(Integer codigo, String uf) {
+		super();
+		this.codigo = codigo;
+		this.uf = uf;
+	}
+ 
+	
 	
 }
